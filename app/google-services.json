@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "725690721218",
+    "project_id": "com-app-myjamavaran",
+    "storage_bucket": "com-app-myjamavaran.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725690721218:android:75225ef30b6ba4ad332c5b",
+        "android_client_info": {
+          "package_name": "com.app.myjamavaran"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD42zC6SNtrFk3nCVTS_C9gVRajvJXZQgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

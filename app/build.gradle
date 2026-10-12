@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+def gsFile = file("google-services.json")
+if (gsFile.exists()) {
+    apply plugin: 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.app.myjamavaran'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.app.myjamavaran"
+        minSdk 24
+        targetSdk 34
+        versionCode 7
+        versionName "3.0.0"
+
+        buildConfigField "boolean", "ALLOW_HTTP", "false"
+        buildConfigField "boolean", "EXTERNAL_IN_APP", "false"
+        buildConfigField "boolean", "PULL_REFRESH", "true"
+        buildConfigField "boolean", "UPLOAD_ENABLED", "true"
+        buildConfigField "boolean", "DOWNLOADS_ENABLED", "true"
+        buildConfigField "boolean", "ZOOM_ENABLED", "false"
+        buildConfigField "String", "REST_BASE", "\"/appsaz/\""
+        buildConfigField "String", "APP_KEY", "\"JV70ec9cac190e475a\""
+        buildConfigField "String", "CUSTOM_CSS", "\"\""
+        buildConfigField "String", "CUSTOM_JS", "\"\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures { buildConfig true }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = '17' }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.activity:activity-ktx:1.9.0'
+    implementation 'com.google.firebase:firebase-messaging:24.0.0'
+}
