@@ -16,7 +16,7 @@ android {
         applicationId "com.app.myjamavaran"
         minSdk 24
         targetSdk 34
-        versionCode 7
+        versionCode 8
         versionName "3.0.0"
 
         buildConfigField "boolean", "ALLOW_HTTP", "false"
@@ -25,7 +25,7 @@ android {
         buildConfigField "boolean", "UPLOAD_ENABLED", "true"
         buildConfigField "boolean", "DOWNLOADS_ENABLED", "true"
         buildConfigField "boolean", "ZOOM_ENABLED", "false"
-        buildConfigField "String", "REST_BASE", "\"/appsaz/\""
+        buildConfigField "String", "REST_BASE", "\"https://my.fc-jamavaran.ir/admin/appsaz/\""
         buildConfigField "String", "APP_KEY", "\"JV70ec9cac190e475a\""
         buildConfigField "String", "CUSTOM_CSS", "\"\""
         buildConfigField "String", "CUSTOM_JS", "\"\""
